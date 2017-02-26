@@ -3,6 +3,11 @@
 	"name": "asp.net",
 	"private": true,
   "devDependencies": {
-    "gulp": "3.1.1" 
+    "gulp": "3.1.1",
+    "gulp-less": "3.3.0",
+    "gulp-concat": "2.6.1",
+    "gulp-cssmin": "0.1.7",
+    "gulp-uglify": "2.0.1",
+    "require-dir": "0.3.1"
   }
 }

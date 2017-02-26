@@ -4,7 +4,10 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, inital-scalE=1.0"/>
+    <!-- Ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+    <!-- Disable mobile pinch zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>@Model.Title</title>
     <environment names="Development">
         <link rel="stylesheet" href="~/css/site.css" />
@@ -21,41 +24,78 @@
 <body>
 <div class="navigation">
     <span class="navigation-home">
-        <a asp-controller="Home" asp-action="Index">FORM.ten Productions</a>
+       
     </span>
     <div class="navigation-main">
-        <a asp-controller="Home" asp-action="Artists">Artists</a>
-        <a asp-controller="Home" asp-action="Music">Music</a>
-        <a asp-controller="Home" asp-action="SocialMedia">Social Media</a>    
+        
+        
+       
     </div>
-    
 </div>
-<h2>@Model.Title</h2>
     
-<div class="container">
-    <div class="row"></div>
-</div>
 
-@RenderBody()
-    
-    <environment names="Development">
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+<div class="container-fluid">
    
-    </environment>
-    <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
+    <div class="row navigation">
+        <div class="col-xs-12 row">
+            <div class="nav-home col-xs-4">
+                <a asp-controller="Home" asp-action="Index">FORM.ten Productions</a>
+            </div>
+            <div class="nav-items">
+                <div class="nav-item col-xs-2"><a asp-controller="Home" asp-action="Artists">Artists</a>
+                </div>
+                <div class="nav-item col-xs-2"><a asp-controller="Home" asp-action="Music">Music</a>
+                </div>
+                <div class="nav-item col-xs-2"><a asp-controller="Home" asp-action="SocialMedia">Social Media</a>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-xs-12">Playlist</div>
+    </div>
+    <div class="row">
+        <div class="main col-xs-12">
+            a
+            <div class="row">
+                <div class="col-xs-12">a</div>
+            </div>
+        </div>
+    </div>
 
-    @RenderSection("scripts", required: false)
+    <div class="row">
+       <div class="col-xs-10 col-xs-offset-1">Photo of Artists</div>
+    </div>
+    <div class="row">
+       
+    </div>
+</div>
+    
+    <h2>@Model.Title</h2>
+    @RenderBody()
+
+<div class="footer">
+    <p>FORM.ten Productions</p>    
+</div>
+<environment names="Development">
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+   
+</environment>
+<environment names="Staging,Production">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+    </script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+</environment>
+
+@RenderSection("scripts", required: false)
 
 </body>
 </html>

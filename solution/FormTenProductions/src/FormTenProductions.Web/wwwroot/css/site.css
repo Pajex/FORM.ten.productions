@@ -1,1 +1,14 @@
-﻿
+﻿body {
+    background-color: black
+}
+
+.container-fluid > .row > div {
+    border-width: 1px 1px 1px 1px;
+    border-color: black;
+    border-style: solid;
+    background-color: bisque;
+}
+
+.main {
+    background-color: black;
+}
