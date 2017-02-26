@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication1.Controllers
+namespace FormTenProductions.Controllers
 {
     public class HomeController : Controller
     {
@@ -31,5 +31,19 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+
+        public IActionResult Artists()
+        {
+            ViewData["Title"] = "Artists";
+            return View();
+        }
+
+        public IActionResult Music()
+        {
+            ViewData["Music"] = "Artists";
+            return View();
+        }
+
+
     }
 }
