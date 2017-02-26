@@ -1,5 +1,9 @@
 {
   "userSecretsId": "aspnet-MvcMovie-1c3090e8-bd07-4577-9b25-a1232eef4c47",
+ 
+  "runtimes": {
+    "win10-x64": {}
+  },
 
   "dependencies": {
     "Microsoft.AspNetCore.Razor.Tools": {
