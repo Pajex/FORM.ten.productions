@@ -1,0 +1,5 @@
+Update nuget packages!
+
+Add ef core: 
+> dotnet ef migrations add Initial
+> dotnet ef database update
