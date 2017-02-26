@@ -1,5 +1,15 @@
+* * * * * * Downloads * * * * * * 
++ SQL Server Data Tools 
++ DotNetCore
++ Update Nuget Packages/Project References
++ 
 Update nuget packages!
 
-Add ef core: 
+
+
+
+* * * * * * * * * * * * * * * * *
+
+EF Core Migrations: 
 > dotnet ef migrations add Initial
 > dotnet ef database update
